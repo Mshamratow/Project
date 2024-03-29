@@ -74,12 +74,12 @@ namespace Project
         {
             InitializeComponent();
             timer1.Start();
-            if (!File.Exists("Resources/guests.txt"))
+            if (!File.Exists("../../../Resources/guests.txt"))
             {
                 logger.Fatal("Файл карточек клиентов не найден");
                 return;
             }
-            StreamReader f = new StreamReader("Resources/guests.txt");
+            StreamReader f = new StreamReader("../../../Resources/guests.txt");
             for (int i = 0; i < guests_amount; i++)
             {
                 int num = int.Parse(f.ReadLine());
@@ -186,12 +186,12 @@ namespace Project
                 {
                     label14.Text = guest.number.ToString();
                     logger.Trace("Поле номера заполнено: " + label14.Text);
-                    if (!File.Exists("Resources/avatars/" + guest.imagepath))
+                    if (!File.Exists("../../../Resources/avatars/" + guest.imagepath))
                     {
                         logger.Error("Аватарка клиента не найдена");
                     }
                     else 
-                        pictureBox3.Image = System.Drawing.Image.FromFile("Resources/avatars/" + guest.imagepath);
+                        pictureBox3.Image = System.Drawing.Image.FromFile("../../../Resources/avatars/" + guest.imagepath);
                     logger.Trace($"Картинка {guest.imagepath} отображена");
                     label7.Text = guest.status;
                     logger.Trace("Поле статуса заполнено: " + label7.Text);

@@ -26,11 +26,11 @@ namespace Project
         public Form2(int number)
         {
             InitializeComponent();
-            if (!File.Exists("Resources/cards.txt"))
+            if (!File.Exists("../../../Resources/cards.txt"))
             {
                 logger.Fatal("Файл карточек клиентов не найден");
             }
-            StreamReader f = new StreamReader("Resources/cards.txt");
+            StreamReader f = new StreamReader("../../../Resources/cards.txt");
             for (int i = 0; i < guests_amount; i++)
             {
                 int num = int.Parse(f.ReadLine());
