@@ -9,7 +9,7 @@ namespace Project
 
         static void Main(string[] args)
         {
-            using (StreamWriter w = File.AppendText("Nlog.config"))
+            using (StreamWriter w = new StreamWriter(@"Nlog.config", false))
             {
                 string text = @"<?xml version=""1.0"" encoding=""utf-8"" ?>
 <nlog xmlns=""http://www.nlog-project.org/schemas/NLog.xsd""
