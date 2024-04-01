@@ -190,7 +190,7 @@ namespace Project
                     {
                         logger.Error("Аватарка клиента не найдена");
                     }
-                    else 
+                    else
                         pictureBox3.Image = System.Drawing.Image.FromFile("../../../Resources/avatars/" + guest.imagepath);
                     logger.Trace($"Картинка {guest.imagepath} отображена");
                     label7.Text = guest.status;
