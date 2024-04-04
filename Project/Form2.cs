@@ -18,7 +18,7 @@ namespace Project
             public int number;
             public string fio;
             public string birthday;
-
+            public string pay;
         }
         const int guests_amount = 5;
         Guest[] guests = new Guest[guests_amount];
@@ -36,10 +36,16 @@ namespace Project
                 int num = int.Parse(f.ReadLine());
                 string fio = f.ReadLine();
                 string birthday = f.ReadLine();
+                string pay = f.ReadLine();
                 if (num == number)
                 {
                     label8.Text = fio;
                     label1.Text = birthday;
+                    label3.Text = pay;
+                    for (int j = 0; j < 30 - pay.Length; j++)
+                    {
+                        label3.Text += " ";
+                    }
                 }
                 guests[i] = new Guest { number = num, fio = fio, birthday = birthday };
                 f.ReadLine();

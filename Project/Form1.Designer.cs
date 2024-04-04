@@ -53,12 +53,11 @@
             label11 = new Label();
             label9 = new Label();
             label8 = new Label();
-            button1 = new Button();
-            label7 = new Label();
             label6 = new Label();
             pictureBox3 = new PictureBox();
             label5 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -223,13 +222,12 @@
             // panel3
             // 
             panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(comboBox1);
             panel3.Controls.Add(label14);
             panel3.Controls.Add(button3);
             panel3.Controls.Add(panel5);
             panel3.Controls.Add(panel4);
             panel3.Controls.Add(label8);
-            panel3.Controls.Add(button1);
-            panel3.Controls.Add(label7);
             panel3.Controls.Add(label6);
             panel3.Controls.Add(pictureBox3);
             panel3.Controls.Add(label5);
@@ -331,29 +329,6 @@
             label8.TabIndex = 16;
             label8.Text = "ФИО                                  ";
             // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(278, 319);
-            button1.Name = "button1";
-            button1.Size = new Size(34, 27);
-            button1.TabIndex = 15;
-            button1.Text = "▼";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BorderStyle = BorderStyle.FixedSingle;
-            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.ForeColor = SystemColors.ActiveCaptionText;
-            label7.Location = new Point(117, 319);
-            label7.Name = "label7";
-            label7.Size = new Size(120, 27);
-            label7.TabIndex = 14;
-            label7.Text = "Статус          ";
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -365,6 +340,7 @@
             label6.Size = new Size(70, 27);
             label6.TabIndex = 13;
             label6.Text = "Статус";
+            label6.Click += label6_Click;
             // 
             // pictureBox3
             // 
@@ -392,6 +368,16 @@
             // 
             timer1.Interval = 500;
             timer1.Tick += tick;
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Зарезервировано", "Свободные", "Заняты", "Выписываются" });
+            comboBox1.Location = new Point(113, 316);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(151, 33);
+            comboBox1.TabIndex = 21;
             // 
             // Form1
             // 
@@ -448,8 +434,6 @@
         private PictureBox pictureBox3;
         private Label label5;
         private Label label6;
-        private Label label7;
-        private Button button1;
         private Panel panel4;
         private Label label8;
         private Panel panel5;
@@ -460,5 +444,6 @@
         private Label label11;
         private Label label14;
         private System.Windows.Forms.Timer timer1;
+        private ComboBox comboBox1;
     }
 }

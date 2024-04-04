@@ -193,8 +193,8 @@ namespace Project
                     else
                         pictureBox3.Image = System.Drawing.Image.FromFile("../../../Resources/avatars/" + guest.imagepath);
                     logger.Trace($"Картинка {guest.imagepath} отображена");
-                    label7.Text = guest.status;
-                    logger.Trace("Поле статуса заполнено: " + label7.Text);
+                    comboBox1.SelectedItem = guest.status;
+                    logger.Trace("Поле статуса заполнено: " + comboBox1.SelectedItem);
                     label8.Text = guest.fio;
                     logger.Trace("Поле ФИО заполнено: " + label8.Text);
                     label11.Text = guest.first_date;
@@ -227,6 +227,11 @@ namespace Project
         private void tick(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToString("hh:mm:ss tt") + " AM         ";
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
